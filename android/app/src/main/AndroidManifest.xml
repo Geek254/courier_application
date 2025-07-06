@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.courier_application">
+
+    <!-- Required for internet access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Optional: Add if using Firebase Cloud Messaging -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Optional: Add if using Firebase Storage or file access -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- Add runtime permission for storage on Android 6.0+ -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" android:maxSdkVersion="32" />
+
+    <application
+        android:label="courier_application"
+        android:icon="@mipmap/ic_launcher">
+        <!-- Existing meta-data and other tags -->
+        <meta-data
+            android:name="firebase_init_provider"
+            android:value="false" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY"/>
+        <!-- Declare v2 embedding (required for Flutter 2.10+) -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+
+        <!-- Optional: Firebase Analytics configuration -->
+        <meta-data
+            android:name="com.google.firebase.analytics.CollectionDeactivated"
+            android:value="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Main activity intent filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!-- Deep linking (optional, if needed) -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="webcourier-982ef.firebaseapp.com" />
+            </intent-filter>
+        </activity>
+        <!-- Declare other activities if needed -->
+    </application>
+
+</manifest>

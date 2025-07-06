@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "137065222350",
+    "project_id": "webcourier-982ef",
+    "storage_bucket": "webcourier-982ef.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137065222350:android:d0ac4b9c48d611e66d409f",
+        "android_client_info": {
+          "package_name": "com.example.courier_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIqkOpPhY0Uhitz82qocE96jgsAA6qHeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
